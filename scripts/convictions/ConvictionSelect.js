@@ -19,9 +19,11 @@ const render = convictionsCollection => {
             ${
                 convictionsCollection.map(convictionsObject => {
                     const valueToBeInNewArray = convictionsObject.name
-                    return valueToBeInNewArray
+                    console.log(valueToBeInNewArray)
+                    return `<option>${valueToBeInNewArray}</option>`
                 })
             }
         </select>
     `
+    
 }
