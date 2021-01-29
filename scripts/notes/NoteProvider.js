@@ -30,21 +30,3 @@ export const saveNote = note => {
 }
 
 export const useNotes = () => notes.slice()
-
-
-// eventHub.addEventListener("click", clickEvent => {
-//     if (clickEvent.target.id === "saveNote") {
-//         const newNote = {
-//             noteText: ""
-//         }
-
-//         saveNote(newNote)
-//     }
-// })
-
-// const NoteForm = () => {
-//     `<article class = "savedNotes">
-//         <p>${newNote.noteText}</p>
-//     </article>
-//     `
-// }

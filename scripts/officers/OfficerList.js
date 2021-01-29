@@ -3,7 +3,6 @@ import { Officer } from './Officer.js'
 
 
 const officersContainer = document.querySelector(".officersContainer")
-const eventHub = document.querySelector(".container")
 
 
 export const OfficerList = () => {

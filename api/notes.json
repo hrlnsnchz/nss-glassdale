@@ -1,37 +1,46 @@
 {
   "notes": [
     {
+      "text": "this guy is sus",
+      "date": "2005-05-05",
+      "suspect": "terry",
       "id": 1
     },
     {
+      "text": "test",
+      "date": "1998-01-01",
+      "suspect": "testguy",
       "id": 2
     },
     {
+      "text": "test",
+      "date": "1998-01-01",
+      "suspect": "testguy",
       "id": 3
     },
     {
+      "text": "test3",
+      "date": "1997-01-02",
+      "suspect": "test",
       "id": 4
     },
     {
+      "text": "test5",
+      "date": "1897-03-03",
+      "suspect": "test",
       "id": 5
     },
     {
+      "text": "test6",
+      "date": "8346-02-02",
+      "suspect": "test",
       "id": 6
     },
     {
+      "text": "sus",
+      "date": "1828-01-02",
+      "suspect": "tom",
       "id": 7
-    },
-    {
-      "text": "ascc",
-      "date": "2020-04-14",
-      "suspect": "bob",
-      "id": 8
-    },
-    {
-      "text": "ascc",
-      "date": "2020-04-14",
-      "suspect": "bob",
-      "id": 9
     }
   ]
 }
