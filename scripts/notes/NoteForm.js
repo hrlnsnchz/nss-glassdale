@@ -12,6 +12,7 @@ const render = () => {
         <input type="date" id="noteDate"
         <label for="noteSuspect">Suspect</label>
         <input type="text" id="noteSuspect"
+        <label for="saveNote">Save Note</label>
         <button id="saveNote">Save Note</button>
     </form>
     `

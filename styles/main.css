@@ -34,3 +34,27 @@
 h3 {
     text-align: center;
 }
+
+aside {
+    width: 15%;
+    float: right;
+}
+
+.criminalsContainer {
+    width: 80%;
+
+}
+
+.note {
+    padding-left: 1%;
+    border: grey solid 2px;
+    text-align: justify;
+    text-justify: distribute-all-lines;
+    text-align: left; 
+    vertical-align: top; 
+    display: inline-block;
+    width: 15em; 
+    margin-bottom: 1em; 
+    margin-right: 3em;
+
+}
