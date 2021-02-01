@@ -6,7 +6,7 @@ import { NoteForm } from "./notes/NoteForm.js";
 import { ShowNoteButton } from "./notes/ShowNotesButton.js";
 import "./notes/NoteList.js"
 import { getAlibis } from "./alibis/AlibiProvider.js";
-// import { ShowAlibisButton } from "./alibis/AlibiButton.js";
+import "./alibis/AlibiButton.js";
 
 // getAlibis()
 OfficerList()
