@@ -1,6 +1,7 @@
 import { getCriminals, useCriminals } from './CriminalProvider.js'
 import { Criminal } from './Criminal.js'
 import { useConvictions } from './../convictions/ConvictionProvider.js'
+import { useAlibis } from '../alibis/AlibiProvider.js'
 
 let criminalsContainer = document.querySelector(".criminalsContainer")
 const eventHub = document.querySelector(".container")
@@ -75,4 +76,12 @@ eventHub.addEventListener("crimeChosen", crimeChosenEvent => {
     )
     // debugger
     render(filteredCriminalsArray)
+})
+
+eventHub.addEventListener('associateId', event => {
+  const associateId = event.detail.id
+  const alibisArray = useAlibis()
+  let associatesHTMLRepresentations = '' 
+  
+  
 })
