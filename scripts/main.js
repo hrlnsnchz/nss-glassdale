@@ -4,17 +4,19 @@ import { OfficerSelect } from "./officers/OfficerSelect.js";
 import { OfficerList } from './officers/OfficerList.js'
 import { NoteForm } from "./notes/NoteForm.js";
 import { ShowNoteButton } from "./notes/ShowNotesButton.js";
-import "./notes/NoteList.js"
-import { getAlibis } from "./alibis/AlibiProvider.js";
+import "./notes/NoteList.js";
 import "./alibis/AlibiButton.js";
+import { getWitnesses } from "./witnesses/WitnessProvider.js";
+import "./witnesses/WitnessButton.js";
+import "./witnesses/WitnessList.js";
+import { WitnessStatementsButton } from "./witnesses/WitnessButton.js";
 
-// getAlibis()
+
+WitnessStatementsButton()
 OfficerList()
 ShowNoteButton()
 NoteForm()
 CriminalList()
 ConvictionSelect()
 OfficerSelect()
-// ShowAlibisButton()
-// saveNote()
-
+getWitnesses()
