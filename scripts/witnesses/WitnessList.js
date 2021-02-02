@@ -14,19 +14,18 @@ export const WitnessesList = () => {
 
         for (const witness of witnessesArray) {
             witnessesHTMLRepresentations += Witness(witness) 
+            console.log('witnessesHTMLRepresentations: ', witnessesHTMLRepresentations);
             
         }
-            witnessesContainer.innerHTML = `
+            witnessesContainer.innerHTML += `
             <h3>Witness Statements</h3>
-            <section class='witnessesList'>
-            ${witnessesHTMLRepresentations}
-            </section>`
+            ${witnessesHTMLRepresentations}`
         
     })
 }
 
 
 
-eventHub.addEventListener("witnessButtonClicked", customEvent => {
-    Witness
+eventHub.addEventListener("witnessesButtonClicked", customEvent => {
+    WitnessesList()
 })
