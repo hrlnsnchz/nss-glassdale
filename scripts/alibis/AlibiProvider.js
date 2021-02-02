@@ -1,6 +1,6 @@
 let alibis = []
 
-export const useAlibis = ( )=> alibis.slice()
+export const useAlibis = ()=> alibis.slice()
 
 export const getAlibis = () => {
     fetch('https://criminals.glassdale.us/criminals')
