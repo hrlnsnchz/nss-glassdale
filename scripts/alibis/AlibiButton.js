@@ -1,7 +1,4 @@
-import { useAlibis } from "./AlibiProvider.js"
-
 const eventHub = document.querySelector('.container')
-const contentTarget = document.querySelector('.criminals')
 
 
 

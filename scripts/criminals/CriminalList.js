@@ -7,6 +7,7 @@ import { Alibi } from '../alibis/Alibi.js'
 let criminalsContainer = document.querySelector(".criminalsContainer")
 const eventHub = document.querySelector(".container")
 
+// renders the criminals when called
 const render = (criminalCollection) => {
     let criminalsHTMLRepresentations = ""
   
@@ -61,7 +62,7 @@ eventHub.addEventListener("crimeChosen", crimeChosenEvent => {
     }
   })
 
-
+// filters the criminals based on selected officer
   eventHub.addEventListener("officerSelected", event => {
     // How can you access the officer name that was selected by the user?
     const officerName = event.detail.officer
@@ -79,6 +80,8 @@ eventHub.addEventListener("crimeChosen", crimeChosenEvent => {
     render(filteredCriminalsArray)
 })
 
+
+// Renders the associate alibis to the DOM
 eventHub.addEventListener('associateId', event => {
   const contentTarget = document.querySelector('.associatesContainer')
   const selectedAlibi = event.detail.id
@@ -99,8 +102,10 @@ eventHub.addEventListener('associateId', event => {
       alibisHTMLRepresentations += Alibi(alibi)
     }
     contentTarget.innerHTML = `
+    <article class="alibis">
     <h4>Known Associates for ${foundAlibiObject.name}</h4>
     ${alibisHTMLRepresentations}
+    </article>
 `
   }
   renderAlibis(knownAssociatesArray)

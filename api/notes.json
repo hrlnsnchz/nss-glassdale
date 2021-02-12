@@ -1,76 +1,10 @@
 {
   "notes": [
     {
-      "text": "sus test",
-      "date": "2021-02-12",
-      "criminalId": 14,
+      "text": "sus person is still sus",
+      "date": "2020-02-02",
+      "criminalId": 12,
       "id": 1
-    },
-    {
-      "text": "test",
-      "date": "2021-02-12",
-      "criminalId": 42,
-      "id": 2
-    },
-    {
-      "text": "test",
-      "date": "2021-02-12",
-      "criminalId": 11,
-      "id": 3
-    },
-    {
-      "text": "test",
-      "date": "2021-02-12",
-      "criminalId": 11,
-      "id": 4
-    },
-    {
-      "text": "test",
-      "date": "2021-02-12",
-      "criminalId": 11,
-      "id": 5
-    },
-    {
-      "text": "test",
-      "date": "2021-02-12",
-      "criminalId": 11,
-      "id": 6
-    },
-    {
-      "text": "sus",
-      "date": "2021-02-12",
-      "criminalId": 10,
-      "id": 7
-    },
-    {
-      "text": "test",
-      "date": "2021-02-12",
-      "criminalId": 14,
-      "id": 8
-    },
-    {
-      "text": "sus",
-      "date": "2021-02-12",
-      "criminalId": 39,
-      "id": 9
-    },
-    {
-      "text": "sus",
-      "date": "2021-02-12",
-      "criminalId": 38,
-      "id": 10
-    },
-    {
-      "text": "sus2",
-      "date": "2021-02-12",
-      "criminalId": 38,
-      "id": 11
-    },
-    {
-      "text": "test3",
-      "date": "2222-02-12",
-      "criminalId": 17,
-      "id": 12
     }
   ]
 }
