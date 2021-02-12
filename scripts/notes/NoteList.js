@@ -1,40 +1,49 @@
 import { getNotes, useNotes } from "./NoteProvider.js";
-import { NoteHTMLConverter } from "./Note.js";
+import { useCriminals, getCriminals } from '../criminals/CriminalProvider.js';
 
-// Query the DOM for the element that your notes will be added to 
 const contentTarget = document.querySelector('.noteListContainer')
-// Define ye olde Evente Hubbe
+const noteListContainer = document.querySelector('.noteList')
+// // Define ye olde Evente Hubbe
 const eventHub = document.querySelector('.container')
 
 eventHub.addEventListener("showNotesClicked", customEvent => {
     NoteList()
 })
 
-const render = (noteArray) => {
-    const allNotesConvertedToStrings = noteArray.map(note => {
-        return NoteHTMLConverter(note)
-    }
-        // convert the notes objects to HTML with NoteHTMLConverter
 
-    ).join("")
 
-    contentTarget.innerHTML = `
-    <h3>Case Notes</h3>
-    ${allNotesConvertedToStrings}
-    `
+
+
+
+const render = (noteCollection, criminalCollection) => {
+    contentTarget.innerHTML = noteCollection.map(note => {
+        // Find the related criminal
+        const relatedCriminal = criminalCollection.find(criminal => criminal.id === note.criminalId)
+
+        return `
+            <section class="note">
+                <h4>Note about ${relatedCriminal.name}</h4>
+                <p>${note.text}</p>
+                <p>${note.date}</p>
+            </section>
+        `
+    }).join("")
 }
 
-// Standard list function you're used to writing by now. BUT, don't call this in main.js! Why not?
-export const NoteList = () => {
+const NoteList = () => {
     getNotes()
+        .then(getCriminals())
         .then(() => {
-            const allNotes = useNotes()
-            render(allNotes)
+            const notes = useNotes()
+            const criminals = useCriminals()
+
+            render(notes, criminals)
         })
 }
 
+
 eventHub.addEventListener("noteStateChanged", event => {
-    if (contentTarget.innerHTML !== "") {
+    if (noteListContainer.innerHTML !== "") {
       NoteList()
     }
   })

@@ -1,52 +1,76 @@
 {
   "notes": [
     {
-      "text": "this guy is sus",
-      "date": "2005-05-05",
-      "suspect": "terry",
+      "text": "sus test",
+      "date": "2021-02-12",
+      "criminalId": 14,
       "id": 1
     },
     {
       "text": "test",
-      "date": "1998-01-01",
-      "suspect": "testguy",
+      "date": "2021-02-12",
+      "criminalId": 42,
       "id": 2
     },
     {
       "text": "test",
-      "date": "1998-01-01",
-      "suspect": "testguy",
+      "date": "2021-02-12",
+      "criminalId": 11,
       "id": 3
     },
     {
-      "text": "test3",
-      "date": "1997-01-02",
-      "suspect": "test",
+      "text": "test",
+      "date": "2021-02-12",
+      "criminalId": 11,
       "id": 4
     },
     {
-      "text": "test5",
-      "date": "1897-03-03",
-      "suspect": "test",
+      "text": "test",
+      "date": "2021-02-12",
+      "criminalId": 11,
       "id": 5
     },
     {
-      "text": "test6",
-      "date": "8346-02-02",
-      "suspect": "test",
+      "text": "test",
+      "date": "2021-02-12",
+      "criminalId": 11,
       "id": 6
     },
     {
       "text": "sus",
-      "date": "1828-01-02",
-      "suspect": "tom",
+      "date": "2021-02-12",
+      "criminalId": 10,
       "id": 7
     },
     {
-      "text": "Suspicious Alibi from Rosanna Treutel: \"disposing of body bags\"",
-      "date": "2021-02-01",
-      "suspect": "Cade Quigley",
+      "text": "test",
+      "date": "2021-02-12",
+      "criminalId": 14,
       "id": 8
+    },
+    {
+      "text": "sus",
+      "date": "2021-02-12",
+      "criminalId": 39,
+      "id": 9
+    },
+    {
+      "text": "sus",
+      "date": "2021-02-12",
+      "criminalId": 38,
+      "id": 10
+    },
+    {
+      "text": "sus2",
+      "date": "2021-02-12",
+      "criminalId": 38,
+      "id": 11
+    },
+    {
+      "text": "test3",
+      "date": "2222-02-12",
+      "criminalId": 17,
+      "id": 12
     }
   ]
 }

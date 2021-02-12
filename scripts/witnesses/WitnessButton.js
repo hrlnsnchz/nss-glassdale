@@ -3,7 +3,7 @@ const contentTarget = document.querySelector('.witnessesContainer')
 
 eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "witnessesButton") {
-        console.log('clickEvent: ', clickEvent);
+        // console.log('clickEvent: ', clickEvent);
         const customEvent = new CustomEvent("witnessesButtonClicked")
         eventHub.dispatchEvent(customEvent)
     }
