@@ -14,10 +14,10 @@ export const WitnessesList = () => {
 
         for (const witness of witnessesArray) {
             witnessesHTMLRepresentations += Witness(witness) 
-            console.log('witnessesHTMLRepresentations: ', witnessesHTMLRepresentations);
+            // console.log('witnessesHTMLRepresentations: ', witnessesHTMLRepresentations);
             
         }
-            witnessesContainer.innerHTML += `
+            witnessesContainer.innerHTML = `
             <h3>Witness Statements</h3>
             ${witnessesHTMLRepresentations}`
         
