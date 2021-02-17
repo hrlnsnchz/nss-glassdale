@@ -1,15 +1,16 @@
 import { getCriminals, useCriminals } from './CriminalProvider.js'
-import { Criminal } from './Criminal.js'
+import { Criminal, OgCriminal } from './Criminal.js'
 import { useConvictions } from './../convictions/ConvictionProvider.js'
 // import { useAlibis } from '../alibis/AlibiProvider.js'
 import { Alibi } from '../alibis/Alibi.js'
 import { getFacilities, useFacilities } from '../facilities/FacilityProvider.js'
 import { getCriminalFacilities, useCriminalFacilities } from '../facilities/CriminalFacilityProvider.js'
+import { FacilityList } from '../facilities/FacilityList.js'
 
 let contentTarget = document.querySelector(".criminalsContainer")
 const eventHub = document.querySelector(".container")
 
-
+// Render function for criminals and facilities
   const render = (criminalsToRender, allFacilities, allRelationships) => {
     // Step 1 - Iterate all criminals
     contentTarget.innerHTML = criminalsToRender.map(
@@ -29,9 +30,11 @@ const eventHub = document.querySelector(".container")
     ).join("")
 }
 
+// Gets the data for and renders criminal list using the render function
   export const CriminalList = () => {
     // Kick off the fetching of both collections of data
     getFacilities()
+      .then(getCriminals)
         .then(getCriminalFacilities)
         .then(
             () => {
@@ -44,6 +47,27 @@ const eventHub = document.querySelector(".container")
                 render(criminals, facilities, crimFac)
             }
         )
+}
+
+// Listener for Facilitites button click
+eventHub.addEventListener('FacilitiesButtonClicked', event => {
+  const contentTarget = document.querySelector('.facilityContainer')
+    FacilityList()
+})
+
+// Renders criminals based on the selections of the dropdowns
+const renderSelections = (criminalCollection) => {
+  let criminalsHTMLRepresentations = ""
+
+  for (const criminal of criminalCollection) {
+    criminalsHTMLRepresentations += OgCriminal(criminal)
+  }
+  
+  criminalsContainer.innerHTML = `
+  <h3>Criminals</h3>
+  <section class="criminalsList">
+  ${criminalsHTMLRepresentations}
+  </section>`
 }
 
 // Listen for the "crimeChosen" custom event you dispatched in ConvictionSelect
@@ -74,7 +98,7 @@ eventHub.addEventListener("crimeChosen", crimeChosenEvent => {
           Then invoke render() and pass the filtered collection as
           an argument
       */
-      render(filteredCriminalsArray)
+      renderSelections(filteredCriminalsArray)
     }
   })
 
@@ -93,7 +117,7 @@ eventHub.addEventListener("crimeChosen", crimeChosenEvent => {
         }
     )
     // debugger
-    render(filteredCriminalsArray)
+    renderSelections(filteredCriminalsArray)
 })
 
 
@@ -126,3 +150,5 @@ eventHub.addEventListener('associateId', event => {
   }
   renderAlibis(knownAssociatesArray)
 })
+
+
