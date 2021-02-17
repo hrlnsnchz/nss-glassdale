@@ -10,8 +10,10 @@ import "./alibis/AlibiButton.js";
 import "./witnesses/WitnessButton.js";
 import "./witnesses/WitnessList.js";
 import { WitnessStatementsButton } from "./witnesses/WitnessButton.js";
+import { DisplayFacButton } from "./facilities/DisplayFacilitiesButton.js";
 
 
+DisplayFacButton()
 WitnessStatementsButton()
 OfficerList()
 ShowNoteButton()
